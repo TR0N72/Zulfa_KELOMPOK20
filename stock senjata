@@ -62,3 +62,8 @@ while True:
                 weapon_index = next((index for index, weapon in enumerate(weapons) if weapon.name.lower() == weapon_name.lower()), None)
                 if weapon_index is not None:
                     weapons.pop(weapon_index)
+
+                    break
+                weapon_index = next((index for index, weapon in enumerate(weapons) if weapon.name.lower() == weapon_name.lower()), None)
+                if weapon_index is not None:
+                    weapons.pop(weapon_index)
