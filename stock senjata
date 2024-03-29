@@ -36,3 +36,29 @@ def main():
         Weapon("Remington 870", 45),
     ]
 
+while True:
+        print("\nOpsi:")
+        print("1. Tambah Jenis Senjata")
+        print("2. Hapus Jenis Senjata")
+        print("3. Perbarui Stok Senjata")
+        print("4. Tampilkan Stok Senjata")
+        print("5. Keluar")
+
+        option = input("Masukkan Opsi (1/2/3/4/5): ")
+
+        if option == "1":
+            while True:
+                weapon_name = input("Masukkan Nama Senjata (ketik 'kembali' untuk ke menu): ")
+                if weapon_name.lower() == "kembali":
+                    break
+                weapon_stock = input(f"Masukkan jumlah stock {weapon_name} : ")
+                weapons.append(Weapon(weapon_name, int(weapon_stock)))
+
+        elif option == "2":
+            while True:
+                weapon_name = input("Masukkan nama senjata yang dihapus (ketik 'kembali' untuk ke menu): ")
+                if weapon_name.lower() == "kembali":
+                    break
+                weapon_index = next((index for index, weapon in enumerate(weapons) if weapon.name.lower() == weapon_name.lower()), None)
+                if weapon_index is not None:
+                    weapons.pop(weapon_index)
