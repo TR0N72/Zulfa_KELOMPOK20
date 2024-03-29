@@ -1,0 +1,19 @@
+# Stock Persenjataan
+
+class Weapon:
+    def __init__(self, name, stock):
+        self.name = name
+        self.stock = stock
+
+def get_stock_by_name(weapons, weapon_name):
+
+    for weapon in weapons:
+        if weapon.name.lower() == weapon_name.lower():
+            return weapon.stock
+    return None
+
+def update_weapon_stock(weapons, weapon_name, quantity):
+
+    weapon = next((weapon for weapon in weapons if weapon.name.lower() == weapon_name.lower()), None)
+    if weapon is not None:
+        weapon.stock += quantity
