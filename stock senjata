@@ -65,8 +65,9 @@ while True:
 
         elif option == "3":
             while True:
-                weapon_name = input("Masukkan nama senjata yang dihapus (ketik 'kembali' untuk ke menu): ")
+                weapon_name = input("Masukkan nama senjata untuk diperbarui (ketik 'kembali' untuk ke menu): ")
                 if weapon_name.lowe() == "kembali":
                     break
                 if weapon_index is not None:
                     weapon.pop(weapon_index)
+
