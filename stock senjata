@@ -73,3 +73,6 @@ while True:
         elif option == "4":
             display_weapons_stock(weapons)
 
+        elif option == "5":
+            print("Selamat Tinggal")
+            exit(0)
