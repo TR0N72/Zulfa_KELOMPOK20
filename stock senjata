@@ -66,8 +66,8 @@ while True:
         elif option == "3":
             while True:
                 weapon_name = input("Masukkan nama senjata untuk diperbarui (ketik 'kembali' untuk ke menu): ")
-                if weapon_name.lowe() == "kembali":
+                if weapon_name.lower() == "kembali":
                     break
-                if weapon_index is not None:
-                    weapon.pop(weapon_index)
+                update_quantity = input(f"Masukkan Jumlah untuk ditambah atau dikurang dari stok {weapon_name}: ")
+                update_weapon_stock(weapons, weapon_name, int(update_quantity))
 
