@@ -70,3 +70,6 @@ while True:
                 update_quantity = input(f"Masukkan Jumlah untuk ditambah atau dikurang dari stok {weapon_name}: ")
                 update_weapon_stock(weapons, weapon_name, int(update_quantity))
 
+        elif option == "4":
+            display_weapons_stock(weapons)
+
