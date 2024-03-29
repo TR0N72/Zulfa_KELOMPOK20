@@ -63,12 +63,12 @@ while True:
                 if weapon_index is not None:
                     weapons.pop(weapon_index)
 
-        elif option == "3":
-                weapon_name = input("Masukkan nama senjata untuk diperbarui (ketik 'kembali' untuk ke menu): ")
-                if weapon_name.lower() == "kembali":
-                    break
-                update_quantity = input(f"Masukkan Jumlah untuk ditambah atau dikurang dari stok {weapon_name}: ")
-                update_weapon_stock(weapons, weapon_name, int(update_quantity))
+elif option == "3":
+            weapon_name = input("Masukkan nama senjata untuk diperbarui (ketik 'kembali' untuk ke menu): ")
+            if weapon_name.lower() == "kembali":
+                break
+            update_quantity = input(f"Masukkan Jumlah untuk ditambah atau dikurang dari stok {weapon_name}: ")
+            update_weapon_stock(weapons, weapon_name, int(update_quantity))
 
         elif option == "4":
             display_weapons_stock(weapons)
