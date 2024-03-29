@@ -17,3 +17,21 @@ def update_weapon_stock(weapons, weapon_name, quantity):
     weapon = next((weapon for weapon in weapons if weapon.name.lower() == weapon_name.lower()), None)
     if weapon is not None:
         weapon.stock += quantity
+def display_weapons_stock(weapons):
+
+    if len(weapons) == 0:
+        print("Senjata Tidak Tersedia.")
+    else:
+        print("Stok Senjata:")
+        for weapon in weapons:
+            print(f"- {weapon.name}: {weapon.stock}")
+
+def main():
+    weapons = [
+        Weapon("AK-47", 100),
+        Weapon("Glock-18", 250),
+        Weapon("Dragunov SVD", 50),
+        Weapon("PINDAD SS-1", 80),
+        Weapon("PzB 38", 10),
+        Weapon("Remington 870", 45),
+    ]
